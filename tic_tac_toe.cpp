@@ -26,6 +26,7 @@ int main() {
 
 		while (!checkSpace(board, playerMove)) {
 			cout << "Please select an open space!" << endl;
+			cin >> playerMove;
 		}
 
 		board[playerMove] = whoseTurn;
