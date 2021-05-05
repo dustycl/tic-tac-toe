@@ -17,9 +17,9 @@ int main() {
 	bool gameOver = false;
 
 	cout << "Welcome to Tic Tac Toe." << endl;
+	printBoard(board);
 
 	while (!gameOver) {
-		printBoard(board);
 		cout << "Turn: " << whoseTurn << endl;
 		cout << "Choose Space: ";
 		cin >> playerMove;
@@ -29,6 +29,7 @@ int main() {
 		}
 
 		board[playerMove] = whoseTurn;
+		printBoard(board);
 
 		gameOver = checkWinner(board);
 		if (whoseTurn == player1) {
